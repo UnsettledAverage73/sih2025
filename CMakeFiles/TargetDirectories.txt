@@ -1,3 +1,0 @@
-/home/impossibleclone/prgm/sih2025/CMakeFiles/wipe_tool.dir
-/home/impossibleclone/prgm/sih2025/CMakeFiles/edit_cache.dir
-/home/impossibleclone/prgm/sih2025/CMakeFiles/rebuild_cache.dir

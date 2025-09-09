@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/wipe_tool.dir/link.d CMakeFiles/wipe_tool.dir/src/core/disk_wiper.cpp.o CMakeFiles/wipe_tool.dir/src/services/main.cpp.o -o wipe_tool
