@@ -3,10 +3,6 @@ ui/node_modules/
 ui/dist/
 ui/.npm/
 
-# Rust (Tauri backend)
-ui/src-tauri/target/
-ui/src-tauri/gen/
-
 # Build artifacts (AppImage, dmg, exe, etc.)
 *.AppImage
 *.dmg
