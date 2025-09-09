@@ -1,4 +1,3 @@
-**Let's Begin**
+# Wipe Tool
 
-My thought is Tauri Frontend.
-C++ Backend.
+A secure data wiping application with a C++ backend and Tauri frontend.
