@@ -1,7 +1,11 @@
 # Node.js
-/node_modules/
-/dist/
-/.npm/
+node_modules/
+dist/
+.npm/
+
+# Rust (Tauri backend)
+src-tauri/target/
+src-tauri/gen/
 
 # Build artifacts (AppImage, dmg, exe, etc.)
 *.AppImage
@@ -16,6 +20,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
 
 # IDE/editor settings
 .vscode/
