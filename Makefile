@@ -1,23 +1,22 @@
-# Compiler and flags
-CXX = g++
-CXXFLAGS = -std=c++17 -Iinclude -Wall
+# Makefile for sih2025 github.com/impossibleclone/sih2025
 
-# Source files
-SRCS = src/core/disk_wiper.cpp src/services/main.cpp
+APP_NAME := wipe_tool
+CMD_DIR := ./cmd/wipe
+BUILD_DIR := ./build
 
-# Output executable
-TARGET = build/wipedevs
+.PHONY: all build run clean
 
-# Default target
-all: $(TARGET)
+all: build
 
-# Build executable
-$(TARGET): $(SRCS)
-	@mkdir -p build
-	$(CXX) $(CXXFLAGS) $^ -o $@
+# Build binary into build/
+build:
+	@mkdir -p $(BUILD_DIR)
+	go build -o $(BUILD_DIR)/$(APP_NAME) $(CMD_DIR)
+
+# Run from build/
+run: build
+	$(BUILD_DIR)/$(APP_NAME)
 
 # Clean build artifacts
 clean:
-	rm -rf build/*
-
-.PHONY: all clean
+	rm -rf $(BUILD_DIR)
