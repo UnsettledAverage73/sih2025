@@ -1,5 +1,3 @@
-# Makefile for sih2025 github.com/impossibleclone/sih2025
-
 APP_NAME := wipe_tool
 CMD_DIR := ./cmd/wipe
 BUILD_DIR := ./build

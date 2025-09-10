@@ -1,8 +1,6 @@
 package scanner
 
 import (
-    "fmt"
-    "os"
     "os/exec"
     "runtime"
 )

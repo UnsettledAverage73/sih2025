@@ -4,7 +4,7 @@ import (
     "fmt"
     "os/exec"
 
-    "github.com/impossibleclone/sih2025/pkg/utils/log"
+    "sih2025/pkg/log"
 )
 
 func eraseAndroid(device string, passes int) error {

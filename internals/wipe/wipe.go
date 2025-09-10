@@ -8,9 +8,10 @@ import (
     "encoding/hex"
     "encoding/json"
     "fmt"
+    "runtime"
     "time"
 
-    "github.com/impossibleclone/sih2025/pkg/utils/log"
+    "sih2025/pkg/log"
 )
 
 type WipeCertificate struct {
@@ -51,7 +52,7 @@ func GenerateCertificate(device string, passes int, duration time.Duration, plat
         log.Warn("Signing failed: %v", err)
     } else {
         cert.Signature = hex.EncodeToString(sig)
-        pubKeyBytes, _ := privKey.PublicKey.MarshalCompressed()
+        pubKeyBytes := elliptic.Marshal(elliptic.P256(), privKey.PublicKey.X, privKey.PublicKey.Y)
         cert.PublicKey = hex.EncodeToString(pubKeyBytes)
     }
 
@@ -77,13 +78,9 @@ func getPlatform() string {
 }
 
 func eraseWindows(device string, passes int) error {
-    return fmt.Errorf("windows implementation required")
-}
-
-func eraseLinux(device string, passes int) error {
-    return fmt.Errorf("linux implementation required")
+    return fmt.Errorf("windows platform not supported in this build")
 }
 
 func eraseAndroid(device string, passes int) error {
-    return fmt.Errorf("android implementation required")
+    return fmt.Errorf("android platform not supported in this build")
 }

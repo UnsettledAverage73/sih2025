@@ -5,13 +5,13 @@ import (
     "flag"
     "fmt"
     "os"
+	"runtime"
     "path/filepath"
-    "runtime"
     "time"
 
-    "github.com/impossibleclone/sih2025/internals/wipe"
-    "github.com/impossibleclone/sih2025/pkg/utils/log"
-	"github.com/jung-kurt/gofpdf"
+    "sih2025/internals/wipe"
+    "sih2025/pkg/log"
+    "github.com/jung-kurt/gofpdf"
 )
 
 var (
@@ -37,7 +37,7 @@ func init() {
 }
 
 func main() {
-    log.Init() // Initialize logger
+    log.Init()
     log.Info("Starting secure wipe process for device: %s", device)
     log.Info("Platform: %s, Passes: %d", runtime.GOOS, passes)
 

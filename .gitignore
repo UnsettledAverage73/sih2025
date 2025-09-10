@@ -1,0 +1,6 @@
+w*.pdf
+w*.json
+*.img
+
+# Build artifacts
+build/

@@ -5,7 +5,7 @@ import (
     "os/exec"
     "syscall"
 
-    "github.com/impossibleclone/sih2025/pkg/utils/log"
+    "sih2025/pkg/log"
 )
 
 func eraseLinux(device string, passes int) error {
