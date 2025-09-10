@@ -6,7 +6,10 @@
     "build": {
         "beforeBuildCommand": "",
         "beforeDevCommand": "",
-        "frontendDist": "../src"
+        "frontendDist": "../src",
+        "externalBin": [
+            "../../build/wipe_tool"
+        ]
     },
     "app": {
         "windows": [

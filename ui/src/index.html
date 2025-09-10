@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Let's Begin</h1>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WipeDevs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1>WipeDevs</h1>
+        <div>
+            <div>
+                <label>Device Path</label>
+                <input id="device-input" type="text" placeholder="e.g., testfile.img" value="testfile.img">
+            </div>
+            <div>
+                <label for="passes-input">Number of Passes</label>
+                <input id="passes-input" type="number" min="1" placeholder="e.g., 3" value="3">
+            </div>
+            <div>
+                <label for="output-input">Output Path</label>
+                <input id="output-input" type="text" placeholder="e.g., ./wipe-cert" value="./wipe-cert">
+            </div>
+            <button id="wipe-button">Start Wipe</button>
+        </div>
+        <div id="result" class="mt-4 text-sm text-gray-600"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
 </html>
