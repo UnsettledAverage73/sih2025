@@ -1,11 +1,32 @@
 {
-  "$schema": "../gen/schemas/desktop-schema.json",
-  "identifier": "default",
-  "description": "enables the default permissions",
-  "windows": [
-    "main"
-  ],
-  "permissions": [
-    "core:default"
-  ]
+    "$schema": "../gen/schemas/desktop-schema.json",
+    "identifier": "default",
+    "description": "enables the default permissions",
+    "local": true,
+    "permissions": [
+        "core:default",
+        {
+            "identifier": "shell:allow-execute",
+            "allow": [
+                {
+                    "name": "wipe_tool",
+                    "sidecar": true,
+                    "args": [
+                        "-device",
+                        {
+                            "validator": "\\S+"
+                        },
+                        "-passes",
+                        {
+                            "validator": "\\d+"
+                        },
+                        "-output",
+                        {
+                            "validator": "\\S+"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
