@@ -1,23 +1,20 @@
 import { Command } from '@tauri-apps/plugin-shell';
 import { message } from '@tauri-apps/plugin-dialog';
-import { resolveResource, resourceDir } from '@tauri-apps/plugin-path';
 
 console.log('main.js loaded successfully');
 
 async function wipeDevice(device, passes, output) {
     try {
         console.log('wipeDevice called with:', { device, passes, output });
-        const resourcePath = await resourceDir();
-        const binaryPath = await resolveResource('wipe_tool');
-        console.log('Resource directory:', resourcePath);
-        console.log('Binary path:', binaryPath);
-        console.log('Executing sidecar with args:', ['-device', device, '-passes', passes.toString(), '-output', output]);
 
         const command = Command.sidecar('wipe_tool', [
             '-device', device,
             '-passes', passes.toString(),
             '-output', output
         ]);
+
+        console.log('Executing sidecar with args:', ['-device', device, '-passes', passes.toString(), '-output', output]);
+
         const result = await command.execute();
         console.log('Sidecar result:', result);
 
@@ -26,7 +23,11 @@ async function wipeDevice(device, passes, output) {
         }
 
         console.log('Wipe result:', result.stdout);
-        await message(`Wipe successful! Certificates saved to ${output}.pdf and ${output}.json`, { title: 'Success', kind: 'info' });
+        await message(
+            `Wipe successful! Certificates saved to ${output}.pdf and ${output}.json`,
+            { title: 'Success', kind: 'info' }
+        );
+
         return result.stdout;
     } catch (error) {
         console.error('Wipe failed:', error);
@@ -38,6 +39,7 @@ async function wipeDevice(device, passes, output) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
     const wipeButton = document.getElementById('wipe-button');
+
     if (wipeButton) {
         console.log('Wipe button found');
         wipeButton.addEventListener('click', async () => {
