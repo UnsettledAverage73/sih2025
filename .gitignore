@@ -4,3 +4,5 @@ w*.json
 
 # Build artifacts
 build/
+ui/node_modules/
+ui/.next/
