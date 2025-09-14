@@ -1,0 +1,10 @@
+{
+  "/welcome/page": "app/welcome/page.js",
+  "/device-selection/page": "app/device-selection/page.js",
+  "/wipe-method/page": "app/wipe-method/page.js",
+  "/wipe-progress/page": "app/wipe-progress/page.js",
+  "/wipe-complete/page": "app/wipe-complete/page.js",
+  "/certificate/page": "app/certificate/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/settings/page": "app/settings/page.js"
+}
