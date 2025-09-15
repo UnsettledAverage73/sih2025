@@ -15,12 +15,20 @@ func Info(format string, v ...interface{}) {
     logger.Printf("[INFO] "+format, v...)
 }
 
+func Debug(format string, v ...interface{}) {
+    logger.Printf("[DEBUG] "+format, v...)
+}
+
 func Warn(format string, v ...interface{}) {
     logger.Printf("[WARN] "+format, v...)
 }
 
 func Error(format string, v ...interface{}) {
     logger.Printf("[ERROR] "+format, v...)
+}
+
+func Trace(format string, v ...interface{}) {
+    logger.Printf("[TRACE] "+format, v...)
 }
 
 func Fatal(format string, v ...interface{}) {
