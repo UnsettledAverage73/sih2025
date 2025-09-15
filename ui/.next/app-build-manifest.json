@@ -21,15 +21,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/welcome/page.js"
     ],
-    "/device-selection/page": [
+    "/settings/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/device-selection/page.js"
+      "static/chunks/app/settings/page.js"
     ],
-    "/wipe-method/page": [
+    "/wipe-progress/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/wipe-method/page.js"
+      "static/chunks/app/wipe-progress/page.js"
+    ],
+    "/wipe-complete/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/wipe-complete/page.js"
+    ],
+    "/erase/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/erase/page.js"
+    ],
+    "/certificate/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/certificate/page.js"
     ]
   }
 }

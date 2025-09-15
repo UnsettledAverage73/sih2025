@@ -11,6 +11,7 @@ src-tauri/gen
 # IDEs
 .vscode
 .idea
+.cursor
 
 # Logs
 logs

@@ -18,7 +18,7 @@ w*.json
 /ui/.next/
 /ui/out/
 /ui/dist/
-/ui/package-lock.json # If using pnpm, this is not needed
+/ui/package-lock.json 
 
 # Tauri and Rust specific ignores
 /target/
@@ -31,4 +31,5 @@ w*.json
 .env
 .env.local
 .vscode/
+.cursor/
 # pnpm-lock.yaml is kept at the root because it is explicitly version controlled
