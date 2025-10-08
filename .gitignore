@@ -1,0 +1,34 @@
+# Custom ignore patterns for wipe certificates/images
+w*.pdf
+w*.json
+*.img
+
+# Go language specific ignores
+/backend/bin/
+/backend/build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+
+# Node.js and Frontend specific ignores
+/frontend/ui/node_modules/
+/frontend/ui/.next/
+/frontend/ui/out/
+/frontend/ui/dist/
+/frontend/ui/package-lock.json 
+
+# Tauri and Rust specific ignores
+/frontend/ui/src-tauri/target/
+**/*.rs.bk
+**/*.rs.orig
+
+# Common OS and editor generated files
+.DS_Store
+.env
+.env.local
+.vscode/
+.cursor/
+# pnpm-lock.yaml is kept at the root because it is explicitly version controlled
